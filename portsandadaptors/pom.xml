@@ -3,21 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.java24</groupId>
+        <artifactId>Brix</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>com.java24</groupId>
-    <artifactId>Brix</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <packaging>pom</packaging>
-    <modules>
-        <module>serviceconsumer</module>
-        <module>service</module>
-        <module>serviceprovider1</module>
-        <module>currency-converter1</module>
-        <module>currency-converter2</module>
-        <module>currency-app</module>
-        <module>portsandadaptors</module>
-    </modules>
+    <artifactId>portsandadaptors</artifactId>
 
     <properties>
         <maven.compiler.source>24</maven.compiler.source>
