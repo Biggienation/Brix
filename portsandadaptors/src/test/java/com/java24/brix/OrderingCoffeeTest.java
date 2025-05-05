@@ -1,21 +1,24 @@
 package com.java24.brix;
 
-import com.java24.brix.ports.CoffeeShop;
-import com.java24.brix.ports.Order;
+import com.java24.brix.ports.*;
 import com.java24.brix.ports.api.PlaceAnOrder;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class OrderingCoffeeTest {
+
     @Test
     @DisplayName("Place an Coffee order")
     void OrderACoffee() {
         //Given
-        PlaceAnOrder placeAnORder = new CoffeeShop();
+        InMermmoryOrders orders = new InMermmoryOrders();
+        PlaceAnOrder placeAnORder = new CoffeeShop(orders);
         //when
-        Order order = new Order();
+        Order order = new Order(Location.TAKE_AWAY, List.of(new LineItem(Drink.LATTE, Milk.WHOLE, Size.SMALL, 1)));
         Order placedOrder = placeAnORder.placeOrder(order);
         //then
         assertThat(placedOrder).isNotNull();
