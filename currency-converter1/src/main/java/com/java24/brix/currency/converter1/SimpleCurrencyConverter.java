@@ -1,9 +1,11 @@
 package com.java24.brix.currency.converter1;
 
 import com.java24.brix.service.currency.ConverterName;
+import com.java24.brix.service.currency.Currency;
 import com.java24.brix.service.currency.CurrencyConverter;
 
-    @ConverterName("Simple Currency Converter")
+    @ConverterName("EUR,USD Converter")
+    @Currency({ "USD", "EUR"})
     public class SimpleCurrencyConverter implements CurrencyConverter {
         private static final double USD_TO_EUR = 0.85;
         private static final double EUR_TO_USD = 1.18;

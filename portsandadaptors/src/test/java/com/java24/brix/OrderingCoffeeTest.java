@@ -16,7 +16,7 @@ public class OrderingCoffeeTest {
         PlaceAnOrder placeAnORder = new CoffeeShop();
         //when
         Order order = new Order();
-        Order placedOrder = PlaceAnOrder.placeOrder(order);
+        Order placedOrder = placeAnORder.placeOrder(order);
         //then
         assertThat(placedOrder).isNotNull();
     }

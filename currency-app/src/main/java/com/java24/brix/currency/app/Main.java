@@ -1,6 +1,7 @@
 package com.java24.brix.currency.app;
 
 import com.java24.brix.service.currency.ConverterName;
+import com.java24.brix.service.currency.Currency;
 import com.java24.brix.service.currency.CurrencyConverter;
 
 import java.util.ArrayList;
@@ -38,13 +39,19 @@ public class Main {
 
         CurrencyConverter converter = converters.get(choice - 1);
 
+        Currency currency = converter.getClass().getAnnotation(Currency.class);
+        String currencyOptions = "";
+        for (String c : currency.value()) {
+            currencyOptions = String.join(",", currency.value());
+        }
+
         System.out.print("Enter amount: ");
         double amount = scanner.nextDouble();
 
-        System.out.print("From currency (e.g., USD): ");
+        System.out.print("From currency (" + currencyOptions + "): ");
         String from = scanner.next();
 
-        System.out.print("To currency (e.g., EUR): ");
+        System.out.print("To currency (" + currencyOptions + "): ");
         String to = scanner.next();
 
         try {

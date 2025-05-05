@@ -1,14 +1,15 @@
 package com.java24.brix.currency.converter2;
 
 import com.java24.brix.service.currency.ConverterName;
+import com.java24.brix.service.currency.Currency;
 import com.java24.brix.service.currency.CurrencyConverter;
 
 import java.math.BigDecimal;
-import java.util.Currency;
 import java.util.HashMap;
 import java.util.Map;
 
-@ConverterName("Advanced Currency Converter")
+@ConverterName("EUR,USD,GBP Converter")
+@Currency({ "USD", "EUR", "GBP"})
 public class AdvancedCurrencyConverter implements CurrencyConverter {
     private final Map<String, Double> rates = new HashMap<>();
 
