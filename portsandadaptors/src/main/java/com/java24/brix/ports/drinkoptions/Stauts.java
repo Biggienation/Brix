@@ -1,4 +1,4 @@
-package com.java24.brix.ports;
+package com.java24.brix.ports.drinkoptions;
 
 public enum Stauts {
     PAYMENT_EXPECTED,

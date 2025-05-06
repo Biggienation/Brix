@@ -1,6 +1,10 @@
 package com.java24.brix.ports;
 
 
+import com.java24.brix.ports.drinkoptions.Location;
+import com.java24.brix.ports.drinkoptions.Stauts;
+
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
@@ -30,5 +34,9 @@ public class Order {
 
     public void setStauts(Stauts stauts) {
         this.stauts = stauts;
+    }
+
+    public BigDecimal getCost() {
+        return BigDecimal.ZERO;
     }
 }

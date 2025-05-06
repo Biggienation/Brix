@@ -17,6 +17,7 @@
         <module>currency-converter2</module>
         <module>currency-app</module>
         <module>portsandadaptors</module>
+        <module>infrastructure</module>
     </modules>
 
     <properties>
