@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class Order {
-    private UUID id = UUID.randomUUID();
+    private final UUID id = UUID.randomUUID();
     private final Location location;
     private final List<LineItem> items;
     private Stauts stauts;

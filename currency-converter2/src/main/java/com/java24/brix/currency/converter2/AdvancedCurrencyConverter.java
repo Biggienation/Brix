@@ -4,7 +4,6 @@ import com.java24.brix.service.currency.ConverterName;
 import com.java24.brix.service.currency.Currency;
 import com.java24.brix.service.currency.CurrencyConverter;
 
-import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 
